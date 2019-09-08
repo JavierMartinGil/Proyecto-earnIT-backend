@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+
 let pool = null;
 
 const connect = (done) => {
@@ -8,7 +9,8 @@ const connect = (done) => {
         user: 'root',
         password: '',
         database: 'earnit',
-        port: 3308
+        port: 3308,
+        multipleStatements: true
     })
     done();
 }
